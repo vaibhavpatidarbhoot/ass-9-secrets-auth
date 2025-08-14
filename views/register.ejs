@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register • Secrets</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script defer src="/js/main.js"></script>
+</head>
+<body>
+  <%- include("partials/header") %>
+
+  <main class="card">
+    <h1>Create Account</h1>
+
+    <% if (msg) { %>
+      <div class="alert"><%= msg %></div>
+    <% } %>
+
+    <form action="/register" method="POST" class="form">
+      <label>
+        Name
+        <input type="text" name="name" placeholder="Your name" required />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" placeholder="you@example.com" required />
+      </label>
+
+      <label class="pwd">
+        Password
+        <input id="regPwd" type="password" name="password" placeholder="6–8 chars (Aa1...)" required />
+        <button class="showpwd" type="button" data-target="regPwd" aria-label="Show password">👁</button>
+      </label>
+
+      <p class="hint">Password must contain lowercase, uppercase, a number, and be 6–8 characters.</p>
+
+      <button type="submit" class="btn primary">Sign Up</button>
+      <p class="muted">Already have an account? <a href="/login">Login</a></p>
+    </form>
+  </main>
+</body>
+</html>
 
