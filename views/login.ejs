@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login • Secrets</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script defer src="/js/main.js"></script>
+</head>
+<body>
+  <%- include("partials/header") %>
+
+  <main class="card">
+    <h1>Welcome Back</h1>
+
+    <% if (msg) { %>
+      <div class="alert"><%= msg %></div>
+    <% } %>
+
+    <form action="/login" method="POST" class="form" id="loginForm">
+      <label>
+        Email
+        <input type="email" name="email" placeholder="you@example.com" required />
+      </label>
+
+      <label class="pwd">
+        Password
+        <input id="loginPwd" type="password" name="password" placeholder="6–8 chars (Aa1...)" required />
+        <button class="showpwd" type="button" data-target="loginPwd" aria-label="Show password">👁</button>
+      </label>
+
+      <button type="submit" class="btn primary">Login</button>
+      <p class="muted">New here? <a href="/register">Create an account</a></p>
+    </form>
+  </main>
+</body>
+</html>
 
