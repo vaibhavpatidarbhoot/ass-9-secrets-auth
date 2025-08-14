@@ -1,1 +1,21 @@
+{
+  "name": "ass-9-secrets-auth",
+  "version": "1.0.0",
+  "description": "Secrets Web App with Authentication & Security (Assignment 9)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1",
+    "validator": "^13.11.0"
+  }
+}
 
